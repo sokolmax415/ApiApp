@@ -176,7 +176,7 @@ footer a:hover {
 
 /* Адаптивность*/
 
-@media max-width: 600px {
+@media (max-width: 600px) {
   #film_name {
     width: 180px;
   }

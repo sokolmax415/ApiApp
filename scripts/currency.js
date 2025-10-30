@@ -1,3 +1,5 @@
+
+import "../styles/currency.css"; 
 async function loadRates() {
   const base = document.querySelector("#base").value;
   const date = document.querySelector("#date").value;

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>library</title>
-    <link rel="stylesheet" href="../styles/books.css">
-    <script src="../scripts/books.js" defer></script>
+    <script type="module" src="../scripts/books.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -13,10 +12,8 @@
     <nav class="navigation">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="info.html" class="nav-link">Главная страница</a></li>
-                <li><a href="lucy.html" class="nav-link">Погода</a></li>
-                <li><a href="currency.html" class="nav-link">Конвентор валют</a></li>
-                <li><a href="books.html" class="nav-link">Библиотека</a></li>
+                <li><a href="/ApiApp/pages/currency.html" class="nav-link">Конвентор валют</a></li>
+                <li><a href="/ApiApp/pages/books.html" class="nav-link">Библиотека</a></li>
             </ul>
         </div>
     </nav>
@@ -27,7 +24,7 @@
 
     <fieldset>
         <input id="film_name" type="text" placeholder="Введите название книги на английском">
-        <button id="enter"> <- </button>
+        <button id="enter"> Enter </button>
     </fieldset>
 
     <button id="info"> Справка </button>

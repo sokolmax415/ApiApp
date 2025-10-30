@@ -1,3 +1,4 @@
+import "../styles/books.css"; 
 document.addEventListener("DOMContentLoaded", async() => {
 
   document.getElementById("info").addEventListener("click", () => {

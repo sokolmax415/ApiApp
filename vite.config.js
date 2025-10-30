@@ -2,12 +2,12 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "/ApiApp/",
   build: {
     rollupOptions: {
       input: {
         currency: resolve(__dirname, "pages/currency.html"),
-        weather: resolve(__dirname, "pages/weather.html"),
-        movies: resolve(__dirname, "pages/movies.html")
+        books: resolve(__dirname, "pages/books.html")
       }
     }
   }
