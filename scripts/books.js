@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     const top = books.docs.sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0)).slice(0,12);
 
     const toHTML = top.map((book, i) => {
-        const pic = book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`: "https://via.placeholder.com/100х150?text=No+Cover"
+        const pic = book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`: "img.png"
         return `<li class="card">
             <img src="${pic}" alt="${books.docs[i].title}">
             <div class="info_card">
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async() => {
           }
 
           const ans = data.docs.slice(0,12).map((book, i) => {
-                  const img = book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`: "https://via.placeholder.com/100x150?text=No+Cover"
+                  const img = book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`: "img.png"
                   return `<li class="card">
                       <img src="${img}" alt="${data.docs[i].title}">
                       <div class="info_card">

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виджет погоды</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="/ApiApp/pages/currency.html" class="nav-link">Валюта</a></li>
+                <li><a href="/ApiApp/pages/books.html" class="nav-link">Библиотека</a></li>
+                <li><a href="/ApiApp/pages/weather.html" class="nav-link">Погода</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="weather-header">
+                <h2>Текущая погода</h2>
+                <p>Узнайте погоду в любом городе мира</p>
+            </div>
+            
+            <div class="weather-container">
+                <div class="search-section">
+                    <div class="search-group">
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            placeholder="Введите город (например: Moscow)" 
+                            class="search-input"
+                        >
+                        <button id="searchBtn" class="search-btn">
+                            <span class="btn-text">Поиск</span>
+                            <div class="btn-spinner" style="display: none;"></div>
+                        </button>
+                    </div>
+                    <div class="location-buttons">
+                        <button id="currentLocationBtn" class="location-btn">
+                            📍 Моё местоположение
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="weatherWidget" class="weather-widget">
+                    <div class="weather-loading" id="weatherLoading">
+                        <div class="spinner"></div>
+                        <p>Загрузка данных о погоде...</p>
+                    </div>
+                    
+                    <div class="weather-content" id="weatherContent" style="display: none;">
+                        <div class="current-weather">
+                            <div class="location-info">
+                                <h3 id="cityName" class="city-name"></h3>
+                                <div id="country" class="country"></div>
+                                <div id="date" class="date"></div>
+                            </div>
+                            
+                            <div class="weather-main">
+                                <div class="temperature-section">
+                                    <div id="temperature" class="temperature"></div>
+                                    <div id="feelsLike" class="feels-like"></div>
+                                </div>
+                                <div class="weather-icon-container">
+                                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                                    <div id="weatherDescription" class="weather-desc"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-details-grid">
+                            <div class="detail-card">
+                                <div class="detail-icon">💧</div>
+                                <div class="detail-info">
+                                    <div class="detail-label">Влажность</div>
+                                    <div id="humidity" class="detail-value"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-card">
+                                <div class="detail-icon">💨</div>
+                                <div class="detail-info">
+                                    <div class="detail-label">Ветер</div>
+                                    <div id="windSpeed" class="detail-value"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-card">
+                                <div class="detail-icon">🌡️</div>
+                                <div class="detail-info">
+                                    <div class="detail-label">Давление</div>
+                                    <div id="pressure" class="detail-value"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-card">
+                                <div class="detail-icon">👁️</div>
+                                <div class="detail-info">
+                                    <div class="detail-label">Видимость</div>
+                                    <div id="visibility" class="detail-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-error" id="weatherError" style="display: none;">
+                        <div class="error-icon">⚠️</div>
+                        <h4>Ошибка загрузки</h4>
+                        <p id="errorMessage">Не удалось загрузить данные о погоде</p>
+                        <button class="retry-btn" onclick="loadWeather()">Попробовать снова</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../scripts/weather.js"></script>
+</body>
+</html>

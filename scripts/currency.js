@@ -23,7 +23,7 @@ async function loadRates() {
       tableBody.appendChild(row);
     });
   } catch (err) {
-    tableBody.innerHTML = `<tr><td colspan="2">Ошибка 😢 ${err.message}</td></tr>`;
+    tableBody.innerHTML = `<tr><td colspan="2">Ошибка ${err.message}</td></tr>`;
   }
 }
 

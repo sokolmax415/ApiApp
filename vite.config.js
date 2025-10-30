@@ -7,7 +7,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         currency: resolve(__dirname, "pages/currency.html"),
-        books: resolve(__dirname, "pages/books.html")
+        books: resolve(__dirname, "pages/books.html"),
+        weather: resolve(__dirname, "pages/weather.html")
       }
     }
   }
